@@ -1,3 +1,129 @@
+            /* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+            /* Variables */
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+}
+
+            /* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Work Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+            /* Header */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    padding: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    position: relative;
+}
+
+.links .menu {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    right: 0;
+    top: calc(100% + 1px);
+    background-color: #f6f6f6;
+    z-index: 100;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+
+.links .menu a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    transition: transform .3s;
+}
+
+.links .menu a:hover {
+    transform: translateX(10px);
+}
+
+.links .menu li:hover {
+    background-color: #fafafa;
+}
+
+.links .menu li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.links:hover .menu {
+    display: block;
+}
+
+.links i {
+    font-size: 25px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.links .menu::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+}  
+
+
+.logo {
+    width: 60px;
+}
+            /* Responsive */
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
 }

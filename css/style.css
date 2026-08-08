@@ -175,6 +175,78 @@ header .container {
     font-size: 17px;
 }
 
+            /* Services */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading + p {
+    text-align: center;
+    color: #797979;
+    margin: -30px 0 0;
+    font-size: 20px;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+.srv .text {
+    flex: 1;
+}
+
+.srv h3 {
+    margin: 0 0 20px;
+}
+
+.srv p {
+    color: #777;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.services .image {
+    text-align: center;
+    position: relative;
+}
+
+.services .image img {
+    width: 260px;
+}
+
+.services .image::before {
+    content: "";
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    right: 0;
+    z-index: -1;
+}
             /* Responsive */
 /* Small */
 @media (min-width: 768px) {
@@ -194,5 +266,11 @@ header .container {
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .services .image {
+        display: none;
     }
 }

@@ -386,6 +386,8 @@ header .container {
 .contact .social {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 20px;
     font-size: 16px;
 }
@@ -411,52 +413,119 @@ header .container {
 }
 
             /* Responsive */
+
 /* Small */
-@media (min-width: 768px) {
-    .container {
-        width: 750px;
+@media (min-width:768px){
+    .container{
+        width:750px;
     }
 }
 
 /* Medium */
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
+@media (min-width:992px){
+    .container{
+        width:970px;
     }
 }
 
 /* Large */
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
+@media (min-width:1200px){
+    .container{
+        width:1170px;
     }
 }
 
-@media (max-width: 1199px) {
-    .services .image {
-        display: none;
+/* Hide Services Image */
+@media (max-width:1199px){
+    .services .image{
+        display:none;
     }
 }
 
-@media (max-width: 991px) {
-    .about-content {
+/* Tablet */
+@media (max-width:991px){
+
+    .srv{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .srv i{
+        margin-bottom:20px;
+    }
+
+    .about-content{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+    }
+
+    .about-content .image{
+        margin-bottom:60px;
+    }
+
+    .about-content .image::before,
+    .about-content .image::after{
+        display:none;
+    }
+
+    .about-content .text{
+        flex-basis:100%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .special-heading {
+        font-size: 60px;
+    }
+
+    .special-heading + p {
+        margin-top: -18px;
+        font-size: 16px;
+    }
+
+    .intro-text h1 {
+        font-size: 40px;
+    }
+
+    .intro-text p {
+        font-size: 16px;
+    }
+
+    .srv {
         flex-direction: column;
         text-align: center;
     }
 
-    .about-content .image {
-        margin: 0 auto 60px;
+    .srv i {
+        margin-bottom: 20px;
     }
 
-    .about-content .image::before,
-    .about-content .image::after {
-        display: none;
+    .contact .label {
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: 0;
     }
-}
 
-@media (max-width: 767px) {
-    .contact .label,
     .contact .link {
-        font-size: 25px;
+        font-size: 18px;
+        word-break: break-word;
+    }
+
+    .contact .social {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact .social i {
+        margin-left: 0;
+    }
+
+    .footer {
+        font-size: 15px;
     }
 }

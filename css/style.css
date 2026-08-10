@@ -395,6 +395,21 @@ header .container {
     color: var(--secondary-color);
 }
 
+            /* Footer */
+
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer span {
+    color: var(--main-color);
+}
+
             /* Responsive */
 /* Small */
 @media (min-width: 768px) {

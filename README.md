@@ -17,6 +17,11 @@ A responsive landing page built with HTML and CSS.
 - Font Awesome Icons
 - Google Fonts
 
+## 🚀 Live Demo
+
+https://hagarniazi.github.io/Kasper-HTML-CSS-Project1/
+
 ## Author
 
 Hagar Niazi
+
